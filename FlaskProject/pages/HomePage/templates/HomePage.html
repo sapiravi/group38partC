@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('HomePage.static', filename='css/HomePage.css') }}"/>
+{% endblock %}
+
+{% block page_head_title %}
+    HomePage
+{% endblock %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+
+</head>
+
+
+{% block page_body_main_content %}
+
+
+     <header>
+    <img src="{{ url_for('HomePage.static', filename='media/LittleLogo.PNG') }}" alt="Logo">
+    <section class="=welcome"><h1>Welcome, {{ user_name }}!</h1></section>
+      <br>
+
+
+
+    <section>
+        <nav>
+          <ul>
+              <li><a href="{{ url_for('PersonalDetails_page') }}">Personal Details</a></li>
+            <li><a href="{{ url_for('MyPreviousWorkouts_page') }}">My Previous Workouts</a></li>
+            <li><a href="WorkoutSchedule.html">Workout Schedule</a></li>
+            <li><a href="MyFutureWorkouts.html">My Future Classes</a></li>
+              <li><a href="{{ url_for('login_page') }}">Logout</a></li>
+
+          </ul>
+        </nav>
+        </section>
+  </header>
+    <div class="character">
+  <img src="{{ url_for('HomePage.static', filename='media/Weight.PNG') }}" alt="Cartoon Character" class="character-image">
+  <img src="{{ url_for('HomePage.static', filename='media/LiftingPNG.PNG') }}" alt="Cartoon Character with Barbell" class="character-image-hover">
+</div>
+
+
+<section class="quotes-section">
+    <div class="quote-bubble top-left">
+        <p class="quote-text">"The only bad workout is the one that didn't happen."</p>
+        <p class="quote-author">- Unknown</p>
+    </div>
+    <div class="quote-bubble top-right">
+        <p class="quote-text">"Believe you can and you're halfway there."</p>
+        <p class="quote-author">- Theodore Roosevelt</p>
+    </div>
+</section>
+
+{% if success_message %}
+    <div class="alert alert-success" role="alert">
+        {{ success_message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+{% endif %}
+{% endblock %}
+
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('HomePage.static', filename='js/HomePage.js') }}"></script>
+{% endblock %}
+
+
+
+
+{#{% extends 'base.html' %}#}
+{##}
+{#{% block page_head_css %}#}
+{#    <link rel="stylesheet" href="{{ url_for('HomePage.static', filename='css/HomePage.css') }}"/>#}
+{#{% endblock %}#}
+{##}
+{#{% block page_head_title %}#}
+{#    HomePage#}
+{#{% endblock %}#}
+{##}
+{#<head>#}
+{#  <meta charset="UTF-8">#}
+{#  <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#  <title>Home Page</title>#}
+{##}
+{#</head>#}
+{##}
+{#{% block page_body_main_content %}#}
+{#    <header>#}
+{#        <img src="{{ url_for('HomePage.static', filename='media/LittleLogo.PNG') }}" alt="Logo">#}
+{#        <section class="=welcome"><h1>Welcome, {{ user_name }}!</h1></section>#}
+{#        <br>#}
+{##}
+{#        <section>#}
+{#            <nav>#}
+{#                <ul>#}
+{#                    <li><a href="{{ url_for('PersonalDetails_page') }}">Personal Details</a></li>#}
+{#                    <li><a href="{{ url_for('MyPreviousWorkouts_page') }}">My Previous Workouts</a></li>#}
+{#                    <li><a href="WorkoutSchedule.html">Workout Schedule</a></li>#}
+{#                    <li><a href="MyFutureWorkouts.html">My Future Classes</a></li>#}
+{#                    <li><a href="{{ url_for('login_page') }}">Logout</a></li>#}
+{#                </ul>#}
+{#            </nav>#}
+{#        </section>#}
+{#    </header>#}
+{#    <div class="character">#}
+{#        <img src="{{ url_for('HomePage.static', filename='media/Weight.PNG') }}" alt="Cartoon Character" class="character-image">#}
+{#        <img src="{{ url_for('HomePage.static', filename='media/LiftingPNG.PNG') }}" alt="Cartoon Character with Barbell" class="character-image-hover">#}
+{#    </div>#}
+{##}
+{#    <section class="quotes-section">#}
+{#        <div class="quote-bubble top-left">#}
+{#            <p class="quote-text">"The only bad workout is the one that didn't happen."</p>#}
+{#            <p class="quote-author">- Unknown</p>#}
+{#        </div>#}
+{#        <div class="quote-bubble top-right">#}
+{#            <p class="quote-text">"Believe you can and you're halfway there."</p>#}
+{#            <p class="quote-author">- Theodore Roosevelt</p>#}
+{#        </div>#}
+{#    </section>#}
+{##}
+{#<div id="successBanner" class="success-message">NNNN</div> <!-- הוסף פה את ההודעה -->#}
+{##}
+{#    {% if success_message %}#}
+{#        <div class="alert alert-success" role="alert">#}
+{#            {{ success_message }}#}
+{#            <button type="button" class="close" data-dismiss="alert" aria-label="Close">#}
+{#                <span aria-hidden="true">&times;</span>#}
+{#            </button>#}
+{#        </div>#}
+{#    {% endif %}#}
+{#{% endblock %}#}
+{##}
+{#{% block page_body_js %}#}
+{#    <script src="{{ url_for('HomePage.static', filename='js/HomePage.js') }}"></script>#}
+{#{% endblock %}#}

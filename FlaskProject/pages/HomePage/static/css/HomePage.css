@@ -1,0 +1,189 @@
+
+
+header {
+    background-color: #F7E3B1;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: -100px;
+
+
+
+
+}
+
+
+header img {
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 120px;
+
+}
+
+
+header h1 {
+    margin-top: -80PX;
+    font-size: 36px;
+    margin-bottom: 100px;
+    font-weight: inherit;
+    font-family: Tahoma, sans-serif;
+    color: royalblue;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 180px;
+
+}
+
+nav ul li {
+    display: inline;
+    margin-top: 10px;
+     transform: translateX(-100%);
+
+
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background-color: #333;
+
+
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.main-content h2 {
+    color: #333;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+}
+
+.quotes-section {
+    position: relative;
+    padding: 20px;
+    bottom: 30px;
+}
+
+.quote-bubble {
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 250px; /* Adjust the width as needed */
+}
+
+.quote-text {
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
+}
+
+.quote-author {
+    font-weight: bold;
+    color: #555;
+    margin-top: 10px;
+}
+
+.top-left {
+    top: -50vh;
+    left: 0vw;
+}
+
+.top-right {
+    top: -30vh;
+    left: -8vw;
+}
+
+/* Speech bubble styles */
+.top-left .quote-text::before,
+.top-left .quote-text::after,
+.top-right .quote-text::before,
+.top-right .quote-text::after {
+    content: '';
+    position: absolute;
+    border: 10px solid transparent;
+    border-top-color: #f9f9f9;
+}
+
+.top-left .quote-text::before,
+.top-right .quote-text::before {
+    top: 100%;
+    left: 20px;
+}
+
+.top-left .quote-text::after,
+.top-right .quote-text::after {
+    top: calc(100% - 1px);
+    left: 10px;
+}
+
+
+.character {
+  position: absolute;
+  top: 40%;
+  right: 40px;
+  transform: translateY(-50%);
+}
+
+.character img {
+  display: block;
+  width: 300px; /* Adjust size as needed */
+  height: auto;
+    transition: opacity 0.3s ease-in-out; /* Smooth opacity transition */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+}
+
+.character-image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  /*transition: opacity 0.3s ease;*/
+}
+
+.character:hover .character-image-hover {
+  opacity: 1;
+}
+
+.character:hover .character-image {
+  opacity: 0;
+}
+
+
+
+.success-message {
+    position: fixed; /* נקבע כקבוע כדי להציג את ההודעה תמיד בחלק העליון של העמוד */
+    top: 100px; /* מקום ההודעה בחלק העליון של העמוד */
+    left: 0; /* מקום ההודעה בצד השמאלי של העמוד */
+    width: 200%; /* רוחב ההודעה לתפריט הגולש שלך */
+    background-color: lightgreen;
+    color: black;
+    padding: 50px;
+    text-align: center; /* יישור מרכזי של הטקסט בהודעה */
+    z-index: 9999; /* הצפנת חלק נתונים קריטיים */
+}

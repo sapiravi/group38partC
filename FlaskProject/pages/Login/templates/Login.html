@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('Login.static', filename='css/Login.css') }}"/>
+{% endblock %}
+
+{% block page_head_title %}
+    Login
+{% endblock %}
+
+{% block page_body_main_content %}
+    <div class="login-container">
+        <img src="{{ url_for('Login.static', filename='media/MyLogo.PNG') }}" alt="Logo">
+        <h4>Welcome back</h4>
+        <form action="{{ url_for('Login.login_page') }}" method="POST">
+            <label for="IDInput">ID </label><br>
+            <input type="text" id="IDInput" name="id" placeholder="Enter your ID" required><br>
+            <label for="passwordInput">Password </label><br>
+            <input type="password" id="passwordInput" name="password" placeholder="Enter your password" required><br>
+            <input type="submit" value="Login">
+        </form>
+        {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+        <p>Don't have an account? <a href="{{ url_for('Register_page') }}">Register here</a></p>
+    </div>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('Login.static', filename='js/Login.js') }}"></script>
+{% endblock %}

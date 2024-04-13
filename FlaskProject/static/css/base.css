@@ -1,0 +1,57 @@
+@import "variables.css";
+
+
+
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #F7E3B1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+.backBtn {
+    background-color: limegreen;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    margin-bottom: -20px;
+
+}
+
+
+.backBtn:hover {
+    background-color: #d32f2f;
+}
+
+
+.page-footer{
+ background-color: #f4f4f4;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+        .Logo{
+            width: 350px;
+            justify-content: center;
+            height: auto;
+            position: fixed; /* Change position to fixed */
+            bottom: 70px; /* Adjust distance from the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1; /* Ensure logo stays above other content */
+        }

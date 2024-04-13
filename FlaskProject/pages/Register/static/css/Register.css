@@ -1,0 +1,133 @@
+
+
+.register-container {
+    background-color: #F7E3B1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 350px;
+    height: auto;
+    text-align: center;
+    margin: 150px auto 150px;
+
+
+
+}
+
+.input-container {
+    margin-bottom: 15px;
+    margin-right: 10px;
+
+}
+
+.input-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.input-container input,
+.input-container input[type="password"],
+.input-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+
+}
+
+.input-container input[type="date"] {
+    width: calc(100% - 2px);
+    box-sizing: border-box;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.RegisterButton{
+    background-color: #FFA500; /* Orange color */
+    color: #fff; /* White text color */
+    padding: 12px 20px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+.RegisterButton:hover {
+    background-color: #FFD700; /* Darker orange color on hover */
+}
+
+.register-container {
+    background-color: #F7E3B1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200%;
+    float: right; /* Adjusted to float right */
+    margin-bottom: 80px; /* Add margin at the bottom for spacing */
+    margin-top: 60px;
+    margin-right: 350px;
+}
+
+.about-us-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    float: left;
+    /*margin-bottom: 150px;*/
+    margin-left: 70px; /* Adjust margin-right as needed */
+    margin-top: 150px;
+    font-family: inherit;
+    font-size: 18px;
+}
+
+
+.input-container {
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.input-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.input-container input,
+.input-container input[type="password"],
+.input-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-container input[type="date"] {
+    width: calc(100% - 2px);
+    box-sizing: border-box;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.RegisterButton {
+    background-color: #FFA500;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.RegisterButton:hover {
+    background-color: #FFD700;
+}

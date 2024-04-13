@@ -1,0 +1,15 @@
+Flask
+MongoDB
+Jinja2
+pymongo
+MongoClient
+ServerApi
+session
+render_template
+redirect
+Blueprint
+ObjectId
+jsonify
+request
+cluster
+url_for

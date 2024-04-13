@@ -1,0 +1,32 @@
+/* CSS for sidebar menu */
+.sidebar-menu {
+    width: 250px; /* Adjust width as needed */
+    background-color: #f0f0f0; /* Background color */
+    padding: 20px;
+    position: fixed; /* Fixed position to keep it visible */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.sidebar-menu ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-menu ul li a {
+    display: block; /* Make links block-level for full width */
+    padding: 10px;
+    text-decoration: none;
+    color: #333; /* Link color */
+}
+
+.sidebar-menu ul li a:hover {
+    background-color: #ddd; /* Hover color */
+}

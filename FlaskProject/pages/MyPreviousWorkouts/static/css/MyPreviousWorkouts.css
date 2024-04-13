@@ -1,0 +1,129 @@
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+
+
+
+}
+
+#lesson-list2 {
+    margin: 80px auto 180px;
+    width: 100%;
+
+
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    top: 100px;
+
+
+
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 3px solid #ddd;
+
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.difficulty {
+    text-transform: capitalize;
+    /*position: fixed;*/
+
+}
+
+.filter-button {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    .filter-button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.filter-button:hover {
+    background-color: #45a049;
+}
+
+}
+
+.filter-button:hover {
+    background-color: #45a049;
+}
+
+
+.lessons-title {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    top: 20px;
+
+}
+
+
+
+
+
+.logo {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.backBtn {
+    position: fixed;
+    bottom: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+#previous-workouts-header {
+    background-color: #F7E3B1;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 40px;
+    width: calc(100% - 40px);
+    left: 0;
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    font-family: "Arial", sans-serif; /* Specify font family */
+}
+
+#previous-workouts-header h1 {
+    margin: 0;
+    font-size: 30px; /* Increase font size */
+    font-weight: bold; /* Add font weight */
+    color: #333; /* Change text color */
+}
+

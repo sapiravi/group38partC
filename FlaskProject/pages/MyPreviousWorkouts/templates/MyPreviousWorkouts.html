@@ -1,0 +1,106 @@
+{#{% extends "base.html" %}#}
+{#{% set page_head_title = 'MyPreviousWorkouts' %}#}
+{##}
+{#{% block page_head_css %}#}
+{#    <link rel="stylesheet" href="{{ url_for('MyPreviousWorkouts.static', filename='css/MyPreviousWorkouts.css') }}"/>#}
+{#{% endblock %}#}
+{##}
+{#{% block page_body_main_content %}#}
+{#    {% include "main_menu"%}#}
+{#   <header id="previous-workouts-header">#}
+{#    <h1>My Previous Workouts</h1>#}
+{#</header>#}
+{##}
+{#    <section>#}
+{#    <div class="lesson-page">#}
+{##}
+{#        <div id="lesson-list-container">#}
+{#            <table id="lesson-list2">#}
+{#                <thead>#}
+{#                    <tr>#}
+{#                        <th>Date</th>#}
+{#                        <th>Time</th>#}
+{#                        <th>Branch</th>#}
+{#                        <th>Workout</th>#}
+{#                        <th>Difficulty</th>#}
+{#                    </tr>#}
+{#                </thead>#}
+{#                <tbody>#}
+{##}
+{#                </tbody>#}
+{#            </table>#}
+{#        </div>#}
+{#    </div>#}
+{#    </section>#}
+{#    <section>#}
+{#   <div>#}
+{#    <button class="backBtn" onclick="window.location.href='{{ url_for('Home_Page') }}'">Back to Home Page</button>#}
+{#</div>#}
+{##}
+{#    <div>#}
+{#         <img class="Logo" src="{{ url_for('MyPreviousWorkouts.static', filename='media/MyLogo.PNG') }}" alt="Logo">#}
+{#    </div>#}
+{#    </section>#}
+{##}
+{#{% endblock %}#}
+{##}
+{#{% block page_body_js %}#}
+{#    <script src="{{ url_for('MyPreviousWorkouts.static', filename='js/MyPreviousWorkouts.js') }}"></script>#}
+{#{% endblock %}#}
+
+
+{% extends "base.html" %}
+{% set page_head_title = 'MyPreviousWorkouts' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('MyPreviousWorkouts.static', filename='css/MyPreviousWorkouts.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+<header id="previous-workouts-header">
+    <h1>My Previous Workouts</h1>
+</header>
+
+<section>
+    <div class="lesson-page">
+        <div id="lesson-list-container">
+            <table id="lesson-list2">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Branch</th>
+                        <th>Workout</th>
+                        <th>Difficulty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for workout in workouts %}
+                    <tr>
+                        <td>{{ workout.Date }}</td>
+                        <td>{{ workout.Time }}</td>
+                        <td>{{ workout.Branch }}</td>
+                        <td>{{ workout.Workout }}</td>
+                        <td>{{ workout.Difficulty }}</td>  {# Assuming you have a Difficulty field in your workout document #}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div>
+        <button class="backBtn" onclick="window.location.href='{{ url_for('Home_Page') }}'">Back to Home Page</button>
+    </div>
+    <div>
+        <img class="Logo" src="{{ url_for('MyPreviousWorkouts.static', filename='media/MyLogo.PNG') }}" alt="Logo">
+    </div>
+</section>
+
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('MyPreviousWorkouts.static', filename='js/MyPreviousWorkouts.js') }}"></script>
+{% endblock %}

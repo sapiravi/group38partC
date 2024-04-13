@@ -1,0 +1,151 @@
+{#{% extends "base.html" %}#}
+{##}
+{#{% block page_head_css %}#}
+{#    <link rel="stylesheet" href="{{ url_for('PersonalDetails.static', filename='css/PersonalDetails.css') }}"/>#}
+{#{% endblock %}#}
+{##}
+{#{% block page_head_title %}#}
+{#    Personal Details#}
+{#{% endblock %}#}
+{##}
+{#<head>#}
+{#  <meta charset="UTF-8">#}
+{#  <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#  <title>Personal Details</title>#}
+{##}
+{#</head>#}
+{##}
+{#{% block page_body_main_content %}#}
+{##}
+{#<section>#}
+{#    <nav>#}
+{#      <ul>#}
+{#          <li><a href="{{ url_for('PersonalDetails_page') }}">Personal Details</a></li>#}
+{#        <li><a href="{{ url_for('MyPreviousWorkouts_page') }}">My Previous Workouts</a></li>#}
+{#        <li><a href="WorkoutSchedule.html">Workout Schedule</a></li>#}
+{#        <li><a href="MyFutureWorkouts.html">My Future Classes</a></li>#}
+{#          <li><a href="{{ url_for('login_page') }}">Logout</a></li>#}
+{##}
+{#      </ul>#}
+{#    </nav>#}
+{#    </section>#}
+{##}
+{#    <header>#}
+{#        <h1>My Details</h1>#}
+{#    </header>#}
+{##}
+{#    <section class="main-content">#}
+{#        <h2>{{ user_name }}</h2>#}
+{#        <div class="details">#}
+{#            <div class="row">#}
+{#                <div class="label">ID:</div>#}
+{#                <div class="value" id="id"></div>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="label">Phone Number:</div>#}
+{#                <div class="value" id="phoneNumber"></div>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="label">Email Address:</div>#}
+{#                <div class="value" id="emailAddress"></div>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="label">Gender:</div>#}
+{#                <div class="value" id="gender"></div>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="label">First Name:</div>#}
+{#                <div class="value" id="firstName"></div>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="label">Last Name:</div>#}
+{#                <div class="value" id="lastName"></div>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="label">Birthdate:</div>#}
+{#                <div class="value" id="birthdate"></div>#}
+{#            </div>#}
+{#            <br>#}
+{#            <button class="edit-button">Edit Details</button>#}
+{#        </div>#}
+{#    </section>#}
+{##}
+{#    <div>#}
+{#        <button class="backBtn" onclick="window.location.href='{{ url_for('Home_Page') }}'">Back to Home Page</button>#}
+{#    </div>#}
+{#    <div>#}
+{#        <img class="Logo" src="{{ url_for('PersonalDetails.static', filename='media/MyLogo.PNG') }}" alt="Logo">#}
+{#    </div>#}
+{##}
+{#{% endblock %}#}
+{##}
+{##}
+{#{% block page_body_js %}#}
+{#    <script src="{{ url_for('PersonalDetails.static', filename='js/PersonalDetails.js') }}"></script>#}
+{#{% endblock %}#}
+{##}
+
+{% extends "base.html" %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('PersonalDetails.static', filename='css/PersonalDetails.css') }}"/>
+{% endblock %}
+
+{% block page_head_title %}
+    Personal Details
+{% endblock %}
+
+{% block page_body_main_content %}
+    <header>
+        <h1>My Details</h1>
+    </header>
+
+    <section class="main-content">
+        <h2>{{ user_details }}</h2>
+        <div class="details">
+             <form action="{{ url_for('update_details') }}" method="POST">
+            <div class="row">
+                <div class="label">ID:</div>
+                <div class="value" id="id">{{ user_i_d }}</div>
+            </div>
+            <div class="row">
+                <div class="label">Phone Number:</div>
+                <div class="value" id="phoneNumber">{{ user_phone }}</div>
+            </div>
+            <div class="row">
+                <div class="label">Email Address:</div>
+                <div class="value" id="emailAddress">{{ user_email }}</div>
+            </div>
+            <div class="row">
+                <div class="label">Gender:</div>
+                <div class="value" id="gender">{{ user_gender }}</div>
+            </div>
+            <div class="row">
+                <div class="label">First Name:</div>
+                <div class="value" id="firstName">{{ user_firstname }}</div>
+            </div>
+            <div class="row">
+                <div class="label">Last Name:</div>
+                <div class="value" id="lastName">{{ user_lastname }}</div>
+            </div>
+            <div class="row">
+                <div class="label">Birthdate:</div>
+                <div class="value" id="birthdate">{{ user_birthdate }}</div>
+            </div>
+            <br>
+           <button class="edit-button" id="editButton">Edit Details</button>
+                <button type="submit" class="save-button" id="saveButton" style="display: none;">Save</button>
+            </form>
+        </div>
+    </section>
+
+    <div>
+        <button class="backBtn" onclick="window.location.href='{{ url_for('Home_Page') }}'">Back to Home Page</button>
+    </div>
+    <div>
+        <img class="Logo" src="{{ url_for('PersonalDetails.static', filename='media/MyLogo.PNG') }}" alt="Logo">
+    </div>
+{% endblock %}
+{% block page_body_js %}
+    <script src="{{ url_for('PersonalDetails.static', filename='js/PersonalDetails.js') }}"></script>
+{% endblock %}
